@@ -1,0 +1,22 @@
+{
+  "name": "shared-document-observer",
+  "version": "0.0.0",
+  "description": "A Set instance that invokes any {subtree: true, childList: true} on the current document",
+  "main": "./cjs/index.js",
+  "scripts": {
+    "build": "npm run cjs",
+    "cjs": "ascjs --no-default esm cjs"
+  },
+  "keywords": ["MutationObserver", "document", "shared", "set"],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^4.0.1"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    "import": "./esm/index.js",
+    "default": "./cjs/index.js"
+  }
+}
