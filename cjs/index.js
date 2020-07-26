@@ -1,17 +1,19 @@
 'use strict';
 const set = new Set;
 
-const mo = new MutationObserver(records => {
+const observer = new MutationObserver(records => {
   set.forEach(invoke, records);
 });
 
-mo.observe(
+observer.observe(
   document,
   {subtree: true, childList: true}
 );
 
+set.observer = observer;
+
 module.exports = set;
 
 function invoke(callback) {
-  callback(this, mo);
+  callback(this, observer);
 }
