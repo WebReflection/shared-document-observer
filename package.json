@@ -1,6 +1,6 @@
 {
   "name": "shared-document-observer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Set instance that invokes any {subtree: true, childList: true} on the current document",
   "main": "./cjs/index.js",
   "scripts": {
