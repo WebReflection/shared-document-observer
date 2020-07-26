@@ -7,7 +7,12 @@
     "build": "npm run cjs",
     "cjs": "ascjs --no-default esm cjs"
   },
-  "keywords": ["MutationObserver", "document", "shared", "set"],
+  "keywords": [
+    "MutationObserver",
+    "document",
+    "shared",
+    "set"
+  ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
@@ -18,5 +23,13 @@
   "exports": {
     "import": "./esm/index.js",
     "default": "./cjs/index.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/shared-document-observer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/shared-document-observer/issues"
+  },
+  "homepage": "https://github.com/WebReflection/shared-document-observer#readme"
 }
