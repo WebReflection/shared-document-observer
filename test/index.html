@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module">
+  import sdo from '../esm/index.js';
+  sdo.add(records => {
+    for (const {addedNodes} of records)
+      console.log(addedNodes);
+  });
+  addEventListener('DOMContentLoaded', () => {
+    document.body.innerHTML = '<table><tr><td>1</td><td>2</td></tr></table>';
+    document.body.appendChild(document.createElement('div')).appendChild(document.createElement('p')).textContent = 3;
+    const div = document.createElement('div');
+    div.appendChild(document.createElement('p')).textContent = 4;
+    document.body.appendChild(div);
+  });
+  </script>
+</head>
+</html>
